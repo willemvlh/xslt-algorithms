@@ -1,1 +1,3 @@
-# XSLT Algorithms\n\nVarious algorithms implemented in XSLT 3.0
+#XSLT Algorithms
+
+Various algorithms implemented in XSLT 3.0
