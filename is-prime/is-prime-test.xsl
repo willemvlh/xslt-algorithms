@@ -5,6 +5,7 @@
     exclude-result-prefixes="xs math"
     version="3.0"
     xmlns:f="f">
+    <xsl:output method="text"/>
     <xsl:include href="./is-prime.xsl"/>
     <xsl:template match="/">
         <xsl:assert test="f:isPrime(13)"/>
