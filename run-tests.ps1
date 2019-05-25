@@ -1,4 +1,6 @@
-﻿Get-ChildItem -Recurse -Filter "*test.xsl" | ForEach{
+﻿$totalTests = 0
+$passedTests = 0
+Get-ChildItem -Recurse -Filter "*test.xsl" | ForEach{
     $file = $_.FullName
     $shortFile = $_.BaseName
     $tmp=New-TemporaryFile
@@ -13,5 +15,9 @@
     }
     else{
     Write-Host "Passed: $shortFile ($duration)" -ForegroundColor Green
+    $passedTests++
     }
+    $totalTests++
 }
+Write-Host ""
+Write-Host "Total tests run: $totalTests | passed: $passedTests | failed: $($totalTests - $passedTests)"
