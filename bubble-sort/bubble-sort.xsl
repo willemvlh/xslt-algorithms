@@ -16,8 +16,7 @@
         <xsl:choose>
             <xsl:when test="count($seq) > 1">
                 <xsl:variable name="sortedPair" select="f:compare($seq[1], $seq[2])"/>
-                <xsl:sequence
-                    select="($sortedPair[2], f:pass(($sortedPair[1], $seq[position() > 2])))"/>
+                <xsl:sequence select="insert-before(f:pass(($sortedPair[1], $seq[position() > 2])), 1, $sortedPair[2])"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:sequence select="$seq[1]"/>
