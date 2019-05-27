@@ -6,21 +6,21 @@
 
     <xsl:function name="f:isPrime" as="xs:boolean">
         <xsl:param name="number" as="xs:integer"/>
-        <xsl:variable name="isPrime">
+        <xsl:variable name="isPrime" as="xs:boolean?">
             <xsl:choose>
-                <xsl:when test="$number = 1">
-                    <xsl:value-of select="false()"/>
+                <xsl:when test="$number &lt; 2">
+                    <xsl:sequence select="false()"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:iterate select="2 to xs:integer(math:sqrt($number))">
                         <xsl:if test="$number mod current() = 0">
-                            <xsl:value-of select="false()"/>
+                            <xsl:sequence select="false()"/>
                             <xsl:break/>
                         </xsl:if>
                     </xsl:iterate>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <xsl:value-of select="$isPrime != 'false'"/>
+        <xsl:sequence select="not($isPrime = false())"/>
     </xsl:function>
 </xsl:stylesheet>
