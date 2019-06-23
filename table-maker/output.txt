@@ -1,0 +1,8 @@
+----------------------------------------------------------------
+|AUTHOR        |TITLE                    |CATEGORY             |
+----------------------------------------------------------------
+|Tolken        |Lord of the rings        |Fantasy              |
+|Salinger      |The catcher in the rye   |Youth                |
+|Tom & Jerry   |Grasmaaier               |Huis en tuin         |
+|Trevor McPerry|De wereld is een toverbol|Er is  geen cateogire|
+----------------------------------------------------------------

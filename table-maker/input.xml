@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book>
+        <author>Tolken</author>
+        <title>Lord of the rings</title>
+        <category>Fantasy</category>
+    </book>
+    <book>
+        <author>Salinger</author>
+        <title>The catcher in the rye</title>
+        <category>Youth</category>
+    </book>
+    <book>
+        <author>Tom &amp; Jerry</author>
+        <title>Grasmaaier</title>
+        <category>Huis en tuin</category>
+    </book>
+    <book>
+        <author>Trevor McPerry</author>
+        <title>De wereld is een toverbol</title>
+        <category>Er is  geen cateogire</category>
+    </book>
+</books>
